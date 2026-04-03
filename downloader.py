@@ -51,10 +51,15 @@ def _ydl_download(url: str, cache_dir: Path, logger: logging.Logger) -> Tuple[Pa
     opts = {
         "format": "bestaudio/best",
         "outtmpl": outtmpl,
-        "quiet": True,
+        "quiet": False,
         "noplaylist": True,
         "ignoreerrors": False,
-        "no_warnings": True,
+        "user_agent": friendly_user_agent(),
+        "socket_timeout": 30,
+        "http_headers": {
+            "Accept-Language": "en-US,en;q=0.9",
+            "Accept-Encoding": "gzip, deflate",
+        },
         "postprocessors": [
             {
                 "key": "FFmpegExtractAudio",

@@ -1,1 +1,45 @@
-python play.py "Sapphire" --cache --highlight
+python play.py "your_song" this is for temp download
+python play.py "your_song" --cache this is for permanent download
+
+
+
+
+
+
+# 1. BASIC - Download & Play (AUTO-DELETE after finish)
+python play.py "Happy Pharrell"
+
+# 2. WITH CACHE - Keep songs for reuse
+python play.py "Happy Pharrell" --cache
+
+# 3. HIGHLIGHT LYRICS - Show active word highlighting
+python play.py "Happy Pharrell" --cache --highlight
+
+# 4. USE CACHED SONG (no redownload)
+python play.py "Happy Pharrell" --cache --no-download
+
+# 5. DIRECT URL (skip search)
+python play.py --url "https://www.youtube.com/watch?v=ZbZSe6N_BXs" --cache
+
+# 6. CUSTOM LRC FILE
+python play.py "Happy Pharrell" --cache --lrc /path/to/file.lrc
+
+# 7. CUSTOM CACHE DIRECTORY
+python play.py "Happy Pharrell" --cache --cache-dir ~/my_songs
+
+# 8. DEBUG MODE (verbose logging)
+python play.py "Happy Pharrell" --cache --debug
+
+# 9. SEARCH QUERY OVERRIDE
+python play.py --query "Pink Floyd Comfortably Numb" --cache
+
+
+
+
+
+how to find the download songs 
+# See all cached songs
+ls -lh /var/folders/m9/71bhk39d01j69nfvv9t5xc_r0000gn/T/yt_karaoke_cache/
+
+# Or from terminal:
+open /var/folders/m9/71bhk39d01j69nfvv9t5xc_r0000gn/T/yt_karaoke_cache/

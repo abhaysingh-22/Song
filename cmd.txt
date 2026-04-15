@@ -1,5 +1,5 @@
-python play.py "your_song" this is for temp download
-python play.py "your_song" --cache this is for permanent download
+python play.py "your_song" -->this is for temp download
+python play.py "your_song" --cache -->this is for permanent download
 
 
 
